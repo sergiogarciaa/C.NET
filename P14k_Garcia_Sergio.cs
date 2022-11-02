@@ -35,14 +35,9 @@ namespace P14k_Garcia_Sergio // Note: Nombre actual del proyecto
                 limiteMaximo = random.Next(300, 500 + 1);
                 Console.Write("\t " + limiteMinimo + " | " + limiteMaximo); 
                 // VA CAMBIANDO EL Numero más grade que va generando por la variable Mayor y asigna su valor
-                if (limiteMaximo > mayor)
+                if (limiteMaximo > mayor || limiteMinimo<menor)
                 {
                     mayor = limiteMaximo;
-                }
-
-                // VA CAMBIANDO EL Numero más pequeño que va generando por la variable Menor y asigna su valor
-                if (limiteMinimo < menor)
-                {
                     menor = limiteMinimo;
                 }
             }
