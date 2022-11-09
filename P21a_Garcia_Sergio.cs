@@ -9,8 +9,6 @@ namespace P21a_Garcia_Sergio
         static void Main(string[] args)
         {
             int cant, min, num, nc;
-            bool esCorrecto;
-
 
             cant = Captura("\n\tCantidad de múltiplos a presentar? [100..300]: ", 100, 300);
 
