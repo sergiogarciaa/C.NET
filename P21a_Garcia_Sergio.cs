@@ -52,7 +52,22 @@ namespace P21a_Garcia_Sergio
             int valor = 1;
             bool ok;
 
-            do
+            //do
+            //{
+            //    Console.Write("\n\t {0}: ", txt);
+            //    ok = Int32.TryParse(Console.ReadLine(), out valor);
+
+            //    if (!ok) // IMPORTANTE: La expresión !ok equivale a ok == false
+            //        Console.Write("\n\t** Error!! el valor introducido no es un número entero **\n");
+
+            //    else if (valor < min || valor > max)
+            //        Console.Write("\n\t** Error!! número fuera de rango **\n");
+            //} while (!ok || valor < min || valor > max);
+
+            //Otra forma con While
+
+            ok = true;
+            while (!ok || valor < min || valor > max)
             {
                 Console.Write("\n\t {0}: ", txt);
                 ok = Int32.TryParse(Console.ReadLine(), out valor);
@@ -62,7 +77,7 @@ namespace P21a_Garcia_Sergio
 
                 else if (valor < min || valor > max)
                     Console.Write("\n\t** Error!! número fuera de rango **\n");
-            } while (!ok || valor < min || valor > max);
+            }
 
             return valor;
         }
