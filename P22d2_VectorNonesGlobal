@@ -1,0 +1,129 @@
+// Alumno: García Barrera, Sergio
+
+/*
+
+P22d1_VectorNonesGlobal:
+• Declaramos el vector global vNones.
+• El programa pregunta cuántos impares vas a cargar en la tabla [5..100].
+• Luego llama al método CargaTablaNones, que recibe el número de elementos,
+numE, e inicializa y carga el vector que ya tenemos declarado global, vNones,
+con los primeros “numE” números impares.
+• Por último, pregunta en cuántas columnas los quieres mostrar [1..8] y llama al
+método MuestraTabla, que recibe el número de columnas en que las vas a
+mostrar y presenta cada elemento con su índice delante
+
+P22d2_VectorNonesLocal:
+Repetir la práctica anterior con las siguientes variaciones:
+1) El vector NO será global. (Esto implica que los métodos que utilizan el vector
+tienen que recibirlo como parámetro)
+2) Preguntará si quiere repetir, que actuará en consecuencia. Para esto, construir y
+utilizar el método PreguntaSiNo, que recibe una cadena (la pregunta) y
+devuelve true si pulsas ‘s’ (o ‘S’) o false si pulsas ‘n’ (o ‘N’).
+
+ */
+
+using System;
+using System.Data;
+
+
+namespace P22d2_VectorNonesGlobal
+{
+    internal class P22d2_Garcia_Sergio
+    {
+
+        static void Main(string[] args)
+        {
+            bool bucle;
+            do
+            {
+                int numE; int ncol;
+
+
+                numE = CapturaEntero("\n\n\tCuantos impares quiere cargar en el programa? [5..100]", 5, 100);
+                int[] vNones = new int[numE];
+
+                CargaTablaNones(vNones, numE);
+
+                ncol = CapturaEntero("En cuántas columnas los quieres mostrar [1..8]", 1, 8);
+
+                MuestraTabla(vNones, ncol);
+
+                bucle = PreguntaSiNo("Desea repetir el programa?");
+
+
+                Console.Clear();
+            } while (bucle);
+
+        }
+
+        static bool PreguntaSiNo(string v)
+        {
+            char pulsa;
+
+            do
+            {
+                Console.Write("\n\n\t{0} (s= Sí, n= No): ", v);
+                pulsa = (Console.ReadKey()).KeyChar;
+
+                if (pulsa == 's' || pulsa == 'S')
+                {
+                    return true;
+                }
+                if (pulsa == 'n' || pulsa == 'N')
+                {
+                    return false;
+                }
+
+
+                Console.Clear();
+                Console.WriteLine("ERROR, PULSA: S o N");
+            } while (true);
+        }
+
+        static void MuestraTabla(int[] vNones, int nc)
+        {
+            for (int i = 0; i < vNones.Length; i++)
+            {
+
+                // cuando el contador sea múltiplo del nº de columnas...
+                // Salto de línea
+                if (i % nc == 0)
+                    Console.WriteLine();
+
+                if(i<10)
+                    Console.Write(" ");
+
+                Console.Write("{0}) {1}\t", i, vNones[i]);
+            }
+        }
+
+        static void CargaTablaNones(int[] vNones, int num)
+        {
+            int x = 1;
+            for (int i = 0; i < num; i++)
+            {
+                vNones[i] = x;
+                x += 2;
+
+            }
+        }
+        static int CapturaEntero(string texto, int min, int max)
+        {
+            bool esCorrecto;
+            int valor;
+            do
+            {
+                Console.Write("{0}: ", texto, min, max);
+                esCorrecto = Int32.TryParse(Console.ReadLine(), out valor);
+                if (!esCorrecto)
+                    Console.WriteLine("\n\n\t** Error: el valor introducido no es un número entero");
+                else if (valor < min || valor > max)
+                {
+                    esCorrecto = false;
+                    Console.WriteLine("\n\n\t** Error: el valor introducido no está dentro del rango");
+                }
+            } while (!esCorrecto);
+            return valor;
+        }
+    }
+}
