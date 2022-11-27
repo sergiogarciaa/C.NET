@@ -1,69 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P22f1_Presenta_Fecha
+namespace p22f1_PresentaFecha1
 {
     internal class P22f1_Garcia_Sergio
     {
+        static String[] mes;
+        static int[] dias;
         static void Main(string[] args)
         {
-            CapturaFechaString();
+            int dia = 0;
+            mes = new string[] { " ", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+            dias = new int[31];
 
-            Console.WriteLine("Pulsa una tecla para salir");
-            Console.ReadKey();  
-        }
+            // COMPOSICION DEL AÑO PARA EL METODO
 
-        private static void CapturaFechaString()
-        {
-            int anyo; int mes; int dia;
-            String nombreMes = "";
+            int anyo = CapturaEntero("Introduce un año [1750...2300]: ", 1750, 2300);
+            int mesN = CapturaEntero("Introduce un mes [1...12]: ", 1, 12);
 
-            anyo = CapturaEntero("Introduce un año [1750...2300]: ", 1750, 2300);
-            mes = CapturaEntero("Introduce un mes [1...12]: ", 1, 12);  
-           
-                if (mes == 2)
+            // DETECTAR Nº DIAS EN EL MES INDICADO
+            for (int i = 0; i < dias.Length; i++)
+            {
+                if (mesN == 2)
                 {
                     dia = CapturaEntero("Introduce un día [1...28]: ", 1, 28);
+                    break;
                 }
-                else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11))
+                else if ((mesN == 4 || mesN == 6 || mesN == 9 || mesN == 11))
                 {
                     dia = CapturaEntero("Introduce un día [1...30]: ", 1, 30);
+                    break;
                 }
                 else
                     dia = CapturaEntero("Introduce un día [1...31]: ", 1, 31);
-
-            switch (mes)
-            {
-                case 1: nombreMes = "Enero";
-                    break;
-                case 2: nombreMes = "Febrero";
-                    break;
-                case 3: nombreMes = "Marzo";
-                    break;
-                case 4: nombreMes = "Abril";
-                    break;
-                case 5: nombreMes = "Mayo";
-                    break;
-                case 6: nombreMes = "Junio";
-                    break;
-                case 7: nombreMes = "Julio";
-                    break;
-                case 8: nombreMes = "Agosto";
-                    break;
-                case 9: nombreMes = "Septiembre";
-                    break;
-                case 10: nombreMes = "Octubre";
-                    break;
-                case 11: nombreMes = "Noviembre";
-                    break;
-                case 12: nombreMes = "Diciembre";
-                    break;
+                break;
             }
-            Console.WriteLine("{0} de {1} de {2}", dia, nombreMes, anyo);
+
+
+            FechaString(anyo, mesN, dia);
+
+
+
+            Console.WriteLine("Pulsa una tecla para salir");
+            Console.ReadKey();
         }
+
+        private static void FechaString(int anio, int mesN, int dia)
+        {
+            // FORMAR TEXTO AÑO
+            for (int i = 0; i < mes.Length; i++)
+            {
+                if (i == mesN)
+                    Console.WriteLine("{0} de {1} de {2}", dia, mes[i], anio);
+
+            }
+        }
+
         static int CapturaEntero(string texto, int min, int max)
         {
             bool esCorrecto;
@@ -82,5 +78,6 @@ namespace P22f1_Presenta_Fecha
             } while (!esCorrecto);
             return valor;
         }
+
     }
 }
