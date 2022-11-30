@@ -1,0 +1,34 @@
+/* MuestraNumeros0a99: 
+Presentará en pantalla los números, del 0 al 99 en 10 filas de 10 columnas, 
+Para que los números queden bien distribuidos, haremos que...
+    entre las columnas haya una separación de 5 espacios 
+    y las filas vayan separadas una posición.
+*/
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ColocaNums099();
+        Console.Write("\n\n\n\tPulsa tecla para salir");
+        Console.ReadKey();
+    }
+
+    private static void ColocaNums099()
+    {
+        for (int num = 0; num < 100; num++)
+            ColocaElNumero(num);
+    }
+
+    private static void ColocaElNumero(int num)
+    {
+        // Posición de columna = 5 * <valor de la unidad de num> (+ 10 desplazamiento fijo a la derecha)
+        int columna = 3 + 7 * (num % 10);
+        // Posición de fila = 2 * <valor de la decena de num> (+ 1 desplazamiento fijo hacia abajo)
+        int fila = 1 + 2 * (num / 10);
+
+        // Colocamos el culsor en la posición calculada y escribimos el número
+        Console.SetCursorPosition(columna, fila);
+        Console.Write(num.ToString("00"));
+    }
