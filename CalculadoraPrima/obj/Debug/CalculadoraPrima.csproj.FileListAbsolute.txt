@@ -1,0 +1,8 @@
+C:\Users\sergi\Desktop\Programación\Gitlab\CalculadoraPrima\CalculadoraPrima\bin\Debug\CalculadoraPrima.exe.config
+C:\Users\sergi\Desktop\Programación\Gitlab\CalculadoraPrima\CalculadoraPrima\bin\Debug\CalculadoraPrima.exe
+C:\Users\sergi\Desktop\Programación\Gitlab\CalculadoraPrima\CalculadoraPrima\bin\Debug\CalculadoraPrima.pdb
+C:\Users\sergi\Desktop\Programación\Gitlab\CalculadoraPrima\CalculadoraPrima\obj\Debug\CalculadoraPrima.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\Programación\Gitlab\CalculadoraPrima\CalculadoraPrima\obj\Debug\CalculadoraPrima.csproj.SuggestedBindingRedirects.cache
+C:\Users\sergi\Desktop\Programación\Gitlab\CalculadoraPrima\CalculadoraPrima\obj\Debug\CalculadoraPrima.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\Programación\Gitlab\CalculadoraPrima\CalculadoraPrima\obj\Debug\CalculadoraPrima.exe
+C:\Users\sergi\Desktop\Programación\Gitlab\CalculadoraPrima\CalculadoraPrima\obj\Debug\CalculadoraPrima.pdb
