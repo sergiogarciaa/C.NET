@@ -1,0 +1,8 @@
+C:\Users\sergi\Desktop\Programación\Gitlab\Ordenar\Ordenar\bin\Debug\Ordenar.exe.config
+C:\Users\sergi\Desktop\Programación\Gitlab\Ordenar\Ordenar\bin\Debug\Ordenar.exe
+C:\Users\sergi\Desktop\Programación\Gitlab\Ordenar\Ordenar\bin\Debug\Ordenar.pdb
+C:\Users\sergi\Desktop\Programación\Gitlab\Ordenar\Ordenar\obj\Debug\Ordenar.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\Programación\Gitlab\Ordenar\Ordenar\obj\Debug\Ordenar.csproj.SuggestedBindingRedirects.cache
+C:\Users\sergi\Desktop\Programación\Gitlab\Ordenar\Ordenar\obj\Debug\Ordenar.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\Programación\Gitlab\Ordenar\Ordenar\obj\Debug\Ordenar.exe
+C:\Users\sergi\Desktop\Programación\Gitlab\Ordenar\Ordenar\obj\Debug\Ordenar.pdb
