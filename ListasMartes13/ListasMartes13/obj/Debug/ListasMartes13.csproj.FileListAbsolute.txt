@@ -1,0 +1,8 @@
+C:\Users\sergi\Desktop\Programación\Gitlab\ListasMartes13\ListasMartes13\bin\Debug\ListasMartes13.exe.config
+C:\Users\sergi\Desktop\Programación\Gitlab\ListasMartes13\ListasMartes13\bin\Debug\ListasMartes13.exe
+C:\Users\sergi\Desktop\Programación\Gitlab\ListasMartes13\ListasMartes13\bin\Debug\ListasMartes13.pdb
+C:\Users\sergi\Desktop\Programación\Gitlab\ListasMartes13\ListasMartes13\obj\Debug\ListasMartes13.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\Programación\Gitlab\ListasMartes13\ListasMartes13\obj\Debug\ListasMartes13.csproj.SuggestedBindingRedirects.cache
+C:\Users\sergi\Desktop\Programación\Gitlab\ListasMartes13\ListasMartes13\obj\Debug\ListasMartes13.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\Programación\Gitlab\ListasMartes13\ListasMartes13\obj\Debug\ListasMartes13.exe
+C:\Users\sergi\Desktop\Programación\Gitlab\ListasMartes13\ListasMartes13\obj\Debug\ListasMartes13.pdb
